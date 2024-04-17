@@ -23,7 +23,8 @@ if [[ "$choice" =~ ^[0-9]+$ ]] && [ "$choice" -ge 0 ] && [ "$choice" -lt "${#hos
     selected_host=$(echo "${hosts[$choice]}" | cut -d':' -f2)
     name=$(echo "${hosts[$choice]}" | cut -d':' -f1)
     echo "Connecting to $name ($selected_host)..."
-    ./expect.sh "$passphrase" "$ssh_key_path" "$selected_host"
+    script_full_path=$(dirname "$0")
+    "$script_full_path"/expect.sh "$passphrase" "$ssh_key_path" "$selected_host"
 else
     echo "Invalid choice. Please enter a valid number."
 fi
