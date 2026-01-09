@@ -1,0 +1,11 @@
+hosts:
+  example_host:
+    hostname: example.com
+    user: administrator
+    jump: example_jump
+    password: secret
+
+  example_jump:
+    hostname: 91.215.139.182
+    user: administrator
+    identity_file: ~/admin_priv_key_path
