@@ -12,6 +12,17 @@ Make sure the following tools are installed on your system:
 sudo apt update
 sudo apt install -y yq sshpass
 ```
+### MacOS (brew)
+```bash
+brew update
+brew install yq sshpass
+```
+
+### Arch Linux
+```bash
+sudo pacman -Sy --needed yq sshpass
+```
+
 ## Configuration 
 See hosts.yml.example
 
